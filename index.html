@@ -1,0 +1,435 @@
+<!DOCTYPE html>       
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Corazon de palabras</title>
+   <style>
+    body {
+        background-color: #000000;
+        color: rgb(102, 255, 13);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        animation: heartbeat 1s infinite;
+        filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.8));
+    }
+    .amor, p {
+        color: red;
+    }
+    @keyframes heartbeat {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
+
+    .star {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 90%;
+        animation: twinkle 1.5s infinite;
+    }
+    .star:nth-child(1) {
+        top: 1%;
+        left: 90%;
+        animation-delay: 0.2s;
+    }
+    .star:nth-child(2) {
+        top: 15%;
+        left: 80%;
+        animation-delay: 0.4s;
+    }
+    .star:nth-child(3) {
+        top: 50%;
+        left: 10%;
+        animation-delay: 0.6s;
+    }
+    .star:nth-child(4) {
+        top: 80%;
+        left: 85%;
+        animation-delay: 0.8s;
+    }
+    .star:nth-child(5) {
+        top: 90%;
+        left: 50%;
+        animation-delay: 1s;
+    }
+    .star:nth-child(6) {
+        top: 20%;
+        left: 50%;
+        animation-delay: 1s;
+    }
+    .star:nth-child(7) {
+        top: 30%;
+        left: 10%;
+        animation-delay: 1s;
+    }
+    @keyframes twinkle {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+
+
+    /* Palabras posicionadas en el contenedor */
+    .amor {
+        position: absolute;
+        right: 240px;
+        bottom: 120px;
+    }
+    .primera {
+        position: absolute;
+        right: 250px;
+        bottom: 0;
+    }
+    .segunda {
+        position: absolute;
+        right: 235px;
+        bottom: 15px;
+    }
+    .tercera {
+        position: absolute;
+        right: 215px;
+        bottom: 25px;
+    }
+    .cuarta {
+        position: absolute;
+        right: 205px;
+        bottom: 35px;
+    }
+    .quinta {
+        position: absolute;
+        right: 190px;
+        bottom: 45px;
+    }
+    .sexta {
+        position: absolute;
+        right: 175px;
+        bottom: 60px;
+    }
+    .septima {
+        position: absolute;
+        right: 160px;
+        bottom: 75px;
+    }
+    .octava {
+        position: absolute;
+        right: 145px;
+        bottom: 90px;
+    }
+    .novena {
+        position: absolute;
+        right: 140px;
+        bottom: 105px;
+    }
+    .decima {
+        position: absolute;
+        right: 125px;
+        bottom: 120px;
+    }
+    .decima1 {
+        position: absolute;
+        right: 110px;
+        bottom: 135px;
+    }
+    .decima2 {
+        position: absolute;
+        right: 100px;
+        bottom: 150px;
+    }
+    .decima3 {
+        position: absolute;
+        right: 100px;
+        bottom: 165px;
+    }
+    .decima4 {
+        position: absolute;
+        right: 100px;
+        bottom: 165px;
+    }
+    .decima5 {
+        position: absolute;
+        right: 100px;
+        bottom: 180px;
+    }
+    .decima6 {
+        position: absolute;
+        right: 105px;
+        bottom: 195px;
+    }
+    .decima7 {
+        position: absolute;
+        right: 110px;
+        bottom: 210px;
+    }
+    .decima8 {
+        position: absolute;
+        right: 120px;
+        bottom: 225px;
+    }
+    .decima9 {
+        position: absolute;
+        right: 130px;
+        bottom: 240px;
+    }
+    .vigesima {
+        position: absolute;
+        right: 160px;
+        bottom: 255px;
+    }
+    .vigesima1 {
+        position: absolute;
+        right: 179px;
+        bottom: 165px;
+    }
+    .vigesima2 {
+        position: absolute;
+        right: 205px;
+        bottom: 255px;
+    }
+
+    .vigesima3 {
+        position: absolute;
+        right: 220px;
+        bottom: 240px;
+    }
+
+    .vigesima4 {
+        position: absolute;
+        right: 230px;
+        bottom: 225px;
+    }
+
+    .vigesima5 {
+        position: absolute;
+        right: 240px;
+        bottom: 210px;
+    }
+
+    .vigesima6 {
+        position: absolute;
+        right: 250px;
+        bottom: 190px;
+    }
+    .primera- {
+        position: absolute;
+        right: 190px;
+        bottom: 15px;
+    }
+    .segunda- {
+        position: absolute;
+        right: 300px;
+        bottom: 15px;
+    }
+    .tercera- {
+        position: absolute;
+        right: 310px;
+        bottom: 30px;
+    }
+    .cuarta- {
+        position: absolute;
+        right: 330px;
+        bottom: 55px;
+    }
+    .quinta- {
+        position: absolute;
+        right: 345px;
+        bottom: 70px;
+    }
+    .sexta- {
+        position: absolute;
+        right: 355px;
+        bottom: 85px;
+    }
+    .septima- {
+        position: absolute;
+        right: 390px;
+        bottom: 180px;
+    }
+    .octava- {
+        position: absolute;
+        right: 375px;
+        bottom: 115px;
+    }
+    .novena- {
+        position: absolute;
+        right: 388px;
+        bottom: 128px;
+    }
+    .decima- {
+        position: absolute;
+        right: 395px;
+        bottom: 140px;
+    }
+    .decima-1 {
+        position: absolute;
+        right: 405px;
+        bottom: 155px;
+    }
+
+    .decima-4 {
+        position: absolute;
+        right: 420px;
+        bottom: 170px;
+    }
+    .decima-5 {
+        position: absolute;
+        right: 430px;
+        bottom: 190px;
+    }
+    .decima-6 {
+        position: absolute;
+        right: 435px;
+        bottom: 205px;
+    }
+    .decima-7 {
+        position: absolute;
+        right: 415px;
+        bottom: 220px;
+    }
+    .decima-8 {
+        position: absolute;
+        right: 413px;
+        bottom: 235px;
+    }
+    .decima-9 {
+        position: absolute;
+        right: 405px;
+        bottom: 248px;
+    }
+    .vigesima- {
+        position: absolute;
+        right: 390px;
+        bottom: 265px;
+    }
+    .vigesima-1 {
+        position: absolute;
+        right: 365px;
+        bottom: 279px;
+    }
+    .vigesima-2 {
+        position: absolute;
+        right: 340px;
+        bottom: 265px;
+    }
+
+    .vigesima-3 {
+        position: absolute;
+        right: 320px;
+        bottom: 250px;
+    }
+
+    .vigesima-4 {
+        position: absolute;
+        right: 310px;
+        bottom: 235px;
+    }
+
+    .vigesima-5 {
+        position: absolute;
+        right: 300px;
+        bottom: 215px;
+    }
+
+    .vigesima-6 {
+        position: absolute;
+        right: 285px;
+        bottom: 200px;
+    }
+    .vigesima-7 {
+        position: absolute;
+        right: 285px;
+        bottom: 190px;
+    }
+
+
+
+   </style>
+</head>
+<body>
+   <div class="container">
+      <p class="amor">Alicia</p>
+
+      <p class="primera">AMOR</p>
+      <p class="segunda">AMO</p>
+      <p class="tercera">Alicia</p>
+      <p class="cuarta">Alicia</p>
+      <p class="quinta">Alicia</p>
+      <p class="sexta">Alicia</p>
+      <p class="septima">Alicia</p>
+      <p class="octava">Alicia</p>
+      <p class="novena">amor</p>
+      <p class="decima">eterno</p>
+      <p class="decima1">Alicia</p>
+      <p class="decima2">Alicia</p>
+      <p class="decima3">Alicia</p>
+      <p class="decima4">Alicia</p>
+      <p class="decima5">vida</p>
+      <p class="decima6">TE</p>
+      <p class="decima7">deseo</p>
+      <p class="decima8">Feliz</p>
+      <p class="decima9">Feliz</p>
+      <p class="vigesima">Feliz</p>
+      <p class="vigesima1">AMOR</p>
+      <p class="vigesima2">vida</p>
+      <p class="vigesima3">Feliz</p>
+      <p class="vigesima4">Feliz</p>
+      <p class="vigesima5">Feliz</p>
+      <p class="vigesima6">Feliz</p>
+
+      <p class="primera-">AMOR</p>
+      <p class="segunda-">AMO</p>
+      <p class="tercera-">Alicia</p>
+      <p class="cuarta-">Alicia</p>
+      <p class="quinta-">Alicia</p>
+      <p class="sexta-">Alicia</p>
+      <p class="septima-">amor</p>
+      <p class="octava-">Alicia</p>
+      <p class="novena-">Alicia</p>
+      <p class="decima-">Alicia</p>
+      <p class="decima-1">Alicia</p>
+      <p class="decima-4">vid</p>
+      <p class="decima-5">vida</p>
+      <p class="decima-6">TE</p>
+      <p class="decima-7">deseo</p>
+      <p class="decima-8">Feliz</p>
+      <p class="decima-9">Feliz</p>
+      <p class="vigesima-">Feliz</p>
+      <p class="vigesima-1">Feliz</p>
+      <p class="vigesima-2">Feliz</p>
+      <p class="vigesima-3">Feliz</p>
+      <p class="vigesima-4">Feliz</p>
+      <p class="vigesima-5">Feliz</p>
+      <p class="vigesima-6">Feliz</p>
+      <p class="vigesima-7">se</p>
+   </div>
+      <!-- Stars -->
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>   
+    </div>
+
+
+</body>
+</html>
