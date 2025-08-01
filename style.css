@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.titulo {
+    font-size: 2rem;
+    color: pink;
+    text-shadow: 0 0 15px #f0c;
+    margin-bottom: 70px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.escena {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.cubo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: girar 10s linear infinite;
+    transition: transform 0.3s ease;
+}
+
+.cubo-interno {
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 100px;
+    animation: girar 6s linear infinite reverse;
+}
+
+/* Aplica solo a las caras del cubo externo */
+.cubo-externo .cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 2px solid #444;
+    opacity: 0.4;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    backdrop-filter: blur(2px);
+}
+
+/* Caras del cubo interno (sólidas) */
+.cubo-interno .cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    opacity: 1 !important;
+    transition: none !important;
+    backdrop-filter: none !important;
+}
+
+
+.cara img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Posiciones de caras externas */
+.cara1 { transform: rotateY(0deg) translateZ(150px); }
+.cara2 { transform: rotateY(90deg) translateZ(150px); }
+.cara3 { transform: rotateY(180deg) translateZ(150px); }
+.cara4 { transform: rotateY(-90deg) translateZ(150px); }
+.cara5 { transform: rotateX(90deg) translateZ(150px); }
+.cara6 { transform: rotateX(-90deg) translateZ(150px); }
+
+/* Posiciones de caras internas */
+.cubo-interno .cara1 { transform: rotateY(0deg) translateZ(50px); }
+.cubo-interno .cara2 { transform: rotateY(90deg) translateZ(50px); }
+.cubo-interno .cara3 { transform: rotateY(180deg) translateZ(50px); }
+.cubo-interno .cara4 { transform: rotateY(-90deg) translateZ(50px); }
+.cubo-interno .cara5 { transform: rotateX(90deg) translateZ(50px); }
+.cubo-interno .cara6 { transform: rotateX(-90deg) translateZ(50px); }
+
+/* Animación continua */
+@keyframes girar {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
+}
+
+/* Efectos flotantes */
+#efectos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.efecto {
+    position: absolute;
+    font-size: 24px;
+    animation: flotar 5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes flotar {
+    0%   { transform: translateY(-50px) rotate(0deg); opacity: 0; }
+    50%  { opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Añade esto al final del archivo */
+.cubo-externo .cara {
+    opacity: 0.4; /* menor visibilidad para ver el cubo interno */
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    backdrop-filter: blur(2px);
+}
+
+.cubo-expandido .cara1 { transform: rotateY(0deg) translateZ(200px); }
+.cubo-expandido .cara2 { transform: rotateY(90deg) translateZ(200px); }
+.cubo-expandido .cara3 { transform: rotateY(180deg) translateZ(200px); }
+.cubo-expandido .cara4 { transform: rotateY(-90deg) translateZ(200px); }
+.cubo-expandido .cara5 { transform: rotateX(90deg) translateZ(200px); }
+.cubo-expandido .cara6 { transform: rotateX(-90deg) translateZ(200px); }
+
+.cubo-interno {
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 100px;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: girar 6s linear infinite reverse;
+    opacity: 1 !important;
+    z-index: 10;
+    pointer-events: none; /* evita que el mouse lo afecte */
+}
+
+.cubo-interno .cara {
+    opacity: 1 !important;
+    background-color: #fff; /* fondo blanco para que no se transparente */
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
